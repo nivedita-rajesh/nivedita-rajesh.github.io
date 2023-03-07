@@ -65,6 +65,7 @@ function handleResultValidation() {
     if (a === b && b === c) {
       
       roundWon = true;
+      count=2;
       break;
     }
   }
