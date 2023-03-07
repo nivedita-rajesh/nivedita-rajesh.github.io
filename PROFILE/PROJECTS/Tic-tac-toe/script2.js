@@ -1,6 +1,6 @@
 const tiles = Array.from(document.querySelectorAll('.tile'));
 var resetGameButton = document.querySelector('#reset-game');
-var undoMove= document.getElementById('undo-move');
+var undoMove= document.querySelector('#undo-move');
 var gameMessages = document.getElementById('game-messages');
 var gameTurns= document.getElementById('game-turn');
 var playerOneScoreCard = document.getElementById('player-one-score');
@@ -24,6 +24,9 @@ const winningConditions = [
   [2, 4, 6]
 ];
 
+const moves=[];
+var count=0;
+
 const isValidAction = (tile) => {
   if (tile.innerText === 'X' || tile.innerText === 'O'){
       return false;
@@ -34,6 +37,7 @@ const isValidAction = (tile) => {
 
 const updateBoard =  (index) => {
   board[index] = currentPlayer;
+  count=0;
 }
 
 const changePlayer = () => {
@@ -61,12 +65,12 @@ function handleResultValidation() {
     if (a === b && b === c) {
       
       roundWon = true;
-      gameTurns.className = 'game-over';
       break;
     }
   }
 
   if (roundWon) {
+    
     if (currentPlayer === "X") 
     {
       gameMessages.className = 'player-x-win';
@@ -77,9 +81,14 @@ function handleResultValidation() {
       gameMessages.className = 'player-o-win';
       playerTwoScoreCard.innerHTML = ++playerTwoScore;
     }
+    
     isGameActive = false;
     return;
   }
+
+  if (isGameActive===false) {
+    gameTurns.className = 'game-over';
+  } 
 
   if (!board.includes("")) {
     gameMessages.className = 'draw';
@@ -93,6 +102,7 @@ const userAction = (tile, index) => {
     tile.innerText = currentPlayer;
     tile.classList.add(`player${currentPlayer}`);
     updateBoard(index);
+    moves.push(index);
     handleResultValidation();
     changePlayer();
   }
@@ -103,7 +113,8 @@ const resetBoard = () => {
   board = ['', '', '', '', '', '', '', '', ''];
   isGameActive = true;
 
-  if (currentPlayer === 'O') {
+  if (currentPlayer === 'O') 
+  {
       changePlayer();
   }
 
@@ -114,7 +125,23 @@ const resetBoard = () => {
   });
 }
 
+const Undo_Move = () => {
+  if (moves.length > 0 && count===0) 
+  {
+    var lastMove = moves.pop();
+    board[lastMove] = '';
+    tiles[lastMove].innerText = '';
+    tiles[lastMove].classList.remove('playerX');
+    tiles[lastMove].classList.remove('playerO');
+    count++;
+
+    changePlayer();
+  }
+};
+
+
 resetGameButton.addEventListener('click', resetBoard);
+undoMove.addEventListener('click', Undo_Move);
 tiles.forEach( (tile, index) => {
   tile.addEventListener('click', () => userAction(tile, index));
 });

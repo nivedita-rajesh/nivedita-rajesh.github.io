@@ -58,3 +58,15 @@ input{
   text-transform: uppercase;
 
 }
+
+.word-green{
+  background-color: #52BE80;
+}
+
+.word-yellow{
+  background-color: #F4C471;
+}
+
+.word-grey{
+  background-color: #839192;
+}

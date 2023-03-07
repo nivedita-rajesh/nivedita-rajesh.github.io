@@ -58,6 +58,7 @@ h1{
   text-transform: uppercase;
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 
 button{
@@ -117,7 +118,8 @@ button{
 }
 
 #game-turn.player-x-turn > span.player-x-turn, 
-#game-turn.player-o-turn > span.player-o-turn
+#game-turn.player-o-turn > span.player-o-turn,
+#game-turn.game-over > span.game-over
 {
     color: rgb(225, 162, 248);
     text-align: center;
