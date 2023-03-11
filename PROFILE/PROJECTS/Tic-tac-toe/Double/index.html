@@ -15,9 +15,12 @@
         <div class="container">
 
             <div id="game-turn">
-                <span class="player-x-turn">Player X plays</span>
-                <span class="player-o-turn">Player O plays</span>
-                <span class="game-over">Game-Over</span>
+                <span class="player-x-turn" id="X">Player X plays</span>
+                <span class="player-o-turn" id="O">Player O plays</span>
+            </div>
+
+            <div id="game-over">
+                <span class="sorry">Game-Over!!!</span>
             </div>
 
             <div class="games">
@@ -42,13 +45,17 @@
             <span class="draw">Draw Game</span>
         </div>
         
-        <aside id="nfo">
+        <div id="nfo">
             <h2 style="font-family: Georgia, 'Times New Roman', Times, serif; font-style: italic;">Score Card</h2>
             <div id="score">
                 Player 1: <span id="player-one-score">0</span> <br />
                 Player 2: <span id="player-two-score">0</span> <br />
             </div>
-        </aside>
+        </div>
+        </div>
+
+        <div id="win-sqr">
+
         </div>
     <script src="script2.js"></script>  
     </body>

@@ -12,7 +12,7 @@ body
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    background: #000000;
+    background: #ffffff;
 }
 h1{
   text-align: center;
@@ -20,80 +20,66 @@ h1{
   font-family: Segoe Script, cursive;
   font-size: 4rem;
   font-style: oblique;
-  color: lavender;
+  color: rgb(106, 0, 255);
 }
 .container{
     margin-top: 100px;
-    background-color:#000000;
+    background-color:#ffffff;
     outline-width: 2px;
     position: absolute;
     box-sizing: border-box;
     border-width: 5px;
     border: 10px;
-    border-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
     width: 400px;
     height: 350px;
-    padding-top: 20px;
+    padding-top: 10px;
     padding-left: 20px;
     padding-right: 15px;
  
 }
 
-.games{
+#tic-tac-toe-grid {
   display: grid;  
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-
-}
-.tile{
-  
-  box-sizing: border-box;
-  width: 100px;
-  height: 100px;
-  background: #000000;
-  border: solid 2px rgb(255, 255, 255);
-  display: flex;
-  cursor: pointer;
-  text-transform: uppercase;
-  text-align: center;
-  align-items: center;
   justify-content: center;
-}
-
-button{
   text-align: center;
-  height: 50px; 
-  width: 100px;
-  margin-top: 5px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-
+  font-size: 5.5rem;
+  font-family: Ink Free, sans-serif;
+  color: #00d9ff;
 }
 
-.tile.playerX
-{
-    font-size: 5rem;
-    align-items: center;
-    text-align: center;
-    color: #ed4e6e;
-    font-family: Ink Free, sans-serif;
-    font-weight: bold;
+.tile {
+  box-sizing: border-box;
+width: 100px;
+height: 100px;
+background: #ffffff;
+border: solid 2px rgb(0, 0, 0);
+display: flex;
+cursor: pointer;
+text-transform: uppercase;
+text-align: center;
+align-items: center;
+justify-content: center;
 }
 
-.tile.playerO
-{
-    font-size: 5rem;
-    align-items: center;
-    text-align: center;
-    color: #00ffff;
-    font-family: Ink Free, sans-serif;
-    font-weight: bold;
+
+
+button {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+  background: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 15px;
 }
 
 #nfo {
   text-align:center;
   margin-top: 8px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 #game-messages > span {
@@ -109,7 +95,7 @@ button{
 #game-messages.player-o-win > span.player-o-win,
 #game-messages.draw > span.draw 
 {
-    color:rgb(202, 225, 245);
+    color:rgb(0, 122, 102);
     text-align: center;
     display: block;
     margin-top: 10px;
@@ -121,7 +107,7 @@ button{
 #game-turn.player-o-turn > span.player-o-turn,
 #game-turn.game-over > span.game-over
 {
-    color: rgb(225, 162, 248);
+    color: rgb(166, 0, 226);
     text-align: center;
     display: block;
     margin-bottom: 2px;
@@ -135,4 +121,5 @@ button{
     font-size: 2rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 

@@ -1,0 +1,149 @@
+html {
+  font-size: 60%;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+
+}
+
+body
+{
+  margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000000;
+}
+h1{
+  text-align: center;
+  margin-top: 12px;
+  font-family: Segoe Script, cursive;
+  font-size: 4rem;
+  font-style: oblique;
+  color: lavender;
+}
+.container{
+    margin-top: 100px;
+    background-color:#000000;
+    outline-width: 2px;
+    position: absolute;
+    box-sizing: border-box;
+    border-width: 5px;
+    border: 10px;
+    border-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 350px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 15px;
+ 
+}
+
+.games{
+  display: grid;  
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+}
+.tile{
+  
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  background: #000000;
+  border: solid 2px rgb(255, 255, 255);
+  display: flex;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+button{
+  text-align: center;
+  height: 50px; 
+  width: 100px;
+  margin-top: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.tile.playerX
+{
+    font-size: 5rem;
+    align-items: center;
+    text-align: center;
+    color: #ed4e6e;
+    font-family: Ink Free, sans-serif;
+    font-weight: bold;
+}
+
+.tile.playerO
+{
+    font-size: 5rem;
+    align-items: center;
+    text-align: center;
+    color: #00ffff;
+    font-family: Ink Free, sans-serif;
+    font-weight: bold;
+}
+
+#nfo {
+  text-align:center;
+  margin-top: 8px;
+  color: rgb(255, 255, 255);
+}
+
+#game-messages > span {
+  display: none;
+}
+
+#game-turn > span {
+  display: none;
+}
+
+#game-over > span {
+  display: none;
+}
+
+
+#game-messages.player-x-win > span.player-x-win, 
+#game-messages.player-o-win > span.player-o-win,
+#game-messages.draw> span.draw
+{
+    color:rgb(202, 225, 245);
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    font-size: 3rem;
+    font-family: 'Ink Free', sans-serif;
+}
+
+#game-turn.player-x-turn > span.player-x-turn, 
+#game-turn.player-o-turn > span.player-o-turn
+{
+    color: rgb(225, 162, 248);
+    text-align: center;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 3rem;
+    font-family: 'Ink Free', sans-serif;
+}
+#game-over.sorry > span.sorry
+{
+    color: rgb(181, 3, 3);
+    text-align: center;
+    display: block;
+    margin-bottom: 2px;
+    font-size: 3rem;
+    font-family: 'Ink Free', sans-serif;
+}
+
+#score{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

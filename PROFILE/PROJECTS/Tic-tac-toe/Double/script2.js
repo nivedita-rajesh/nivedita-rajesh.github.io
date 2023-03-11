@@ -3,6 +3,7 @@ var resetGameButton = document.querySelector('#reset-game');
 var undoMove= document.querySelector('#undo-move');
 var gameMessages = document.getElementById('game-messages');
 var gameTurns= document.getElementById('game-turn');
+var gameOver= document.getElementById('game-over');
 var playerOneScoreCard = document.getElementById('player-one-score');
 var playerTwoScoreCard = document.getElementById('player-two-score');
 
@@ -65,6 +66,7 @@ function handleResultValidation() {
     if (a === b && b === c) {
       
       roundWon = true;
+      gameTurns.className = 'game-over';
       count=2;
       break;
     }
@@ -75,11 +77,15 @@ function handleResultValidation() {
     if (currentPlayer === "X") 
     {
       gameMessages.className = 'player-x-win';
+      gameTurns.innerHTML="";
+      gameOver.className="sorry";
       playerOneScoreCard.innerHTML = ++playerOneScore;
     }
     else
     {
       gameMessages.className = 'player-o-win';
+      gameTurns.innerHTML="";
+      gameOver.className="sorry";
       playerTwoScoreCard.innerHTML = ++playerTwoScore;
     }
     
@@ -88,11 +94,13 @@ function handleResultValidation() {
   }
 
   if (isGameActive===false) {
-    gameTurns.className = 'game-over';
+    gameTurns.className = '';
   } 
 
   if (!board.includes("")) {
     gameMessages.className = 'draw';
+    gameTurns.innerHTML="";
+    gameOver.className="sorry";
     isGameActive = false;
     return;
   };
@@ -121,6 +129,8 @@ const resetBoard = () => {
 
   tiles.forEach(tile => {
       tile.innerText = '';
+      gameTurns.className = '';
+      gameOver.className="";
       tile.classList.remove('playerX');
       tile.classList.remove('playerO');
   });
