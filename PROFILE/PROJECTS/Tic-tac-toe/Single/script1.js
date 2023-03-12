@@ -19,6 +19,7 @@ newGameBtn.addEventListener("click", startNewGame);
 function XorO() {
   if (!this.innerText && !gameOver) {
     this.innerText = humanMark;
+   // gameTurns.className='player-x-turn';
     this.style.color = "#ed4e6e";
     resultValidate();
   }

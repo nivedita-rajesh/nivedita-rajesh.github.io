@@ -4,54 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wordle</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="style.css" rel="stylesheet">
+    <title> Wordle</title>
 </head>
+
 <body>
-
-    <h1>Wordle</h1>
     <div class="container">
-        <div class="input_words">
-            
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
+        <u><h1>WORDLE</h1></u>
+        <div id="game-tiles"></div>
 
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
-            <input type="text" class="form-control" maxlength="1">
+        <div id="game-messages">
+            <span class="good-move">Yay! You guessed it right :)</span>
+            <span class="bad-move">Oops! Better luck next time :(</span>
         </div>
+
+        <div id="game-over">
+            <span class="sorry">The word was: </span>
+        </div>
+    
+    
+    <button type="button" class="btn btn-outline-dark" id="new-game">PLAY AGAIN</button>
+    
     </div>
-    <script src="script.js"></script>
+
+    <script src="script.js" type="module"></script>
 </body>
 </html>

@@ -1,72 +1,81 @@
-html {
-    font-size: 60%;
-    font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+h1
+{
+    margin-top: 15px;
+    text-align: center;
+    font-family: playfair display;
+    font-size: 2rem;
+}
+
+button{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+    width: auto;
+    margin-top: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  
   }
 
-  h1{
-    margin-top: 15px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 4rem;
-    font-style: oblique;
-    color: white;
-    font-weight: bold;
+.container
+{
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#game-tiles {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
-  body{
-    margin: 0;
-    padding: 0;
+  
+  .letter-box {
+    border: 2px solid gray;
+    border-radius: 3px;
+    margin: 2px;
+    font-size: 2rem;
+    height: 3.5rem;
+    width: 3.5rem;
     display: flex;
     justify-content: center;
-    min-height: 90vh;
-    background-color: rgb(0, 0, 0);
+    align-items: center;
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+  }
+  
+  .filled-box {
+    border: 2px solid black;
+  }
+  
+  .letter-row {
+    display: flex;
   }
 
-.container{
-    margin-top: 125px;
-    background-color:rgb(0, 0, 0);
-    outline-width: 2px;
-    position: absolute;
-    box-sizing: border-box;
-    border-width: 10px;
-    border: 10px;
-    border-color: rgb(255, 255, 255);
-    width: 460px;
-    height: 545px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 50px;
-    padding-bottom: 15px;
+#game-messages > span 
+{
+    display: none;
+}
+#game-over > span 
+{
+    display: none;
+}
+#game-messages.good-move > span.good-move, 
+#game-messages.bad-move > span.bad-move
+{
+    color:rgb(234, 0, 255);
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    font-size: 3rem;
+    font-family: 'Ink Free', sans-serif;
 }
 
-input{
-    height: 50px;
-}
-.input_words {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-}
-.form-control{
-  height: 75px;
-  width: 75px;
-  border: solid 1px rgba(255, 254, 254, 0.795);
-  background-color: black;
-  font-size: 5rem;
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
 
-}
 
-.word-green{
-  background-color: #52BE80;
-}
 
-.word-yellow{
-  background-color: #F4C471;
-}
-
-.word-grey{
-  background-color: #839192;
-}

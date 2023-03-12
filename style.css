@@ -1,0 +1,28 @@
+body {
+
+    margin-top: 40px;
+    background-image: url("BGpRO.png");
+    background-size: cover;
+    
+  }
+  /* Center card */
+  .card {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  /* Style dropdown menu */
+  .dropdown-menu {
+    background-color: #f8f9fa;
+  }
+  .dropdown-item {
+    color: #343a40;
+  }
+  .container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(rgb(129, 214, 233),rgb(237, 171, 246));
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 12px;
+  }
+
