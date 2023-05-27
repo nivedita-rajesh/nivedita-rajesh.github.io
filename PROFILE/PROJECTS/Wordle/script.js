@@ -99,7 +99,8 @@ function checkGuess ()
 
     if (!WORDS.includes(guessString)) 
     {
-        alert("Word not in list!")
+        alert("Not a word!")
+        guessString = ''
         return
     }
 
@@ -133,12 +134,7 @@ function checkGuess ()
             rightGuess[letterPosition] = "#"
         }
 
-        let delay = 250 * i
-        setTimeout(()=> {
-            //shade box
             box.style.backgroundColor = letterColor
-            //shadeKeyBoard(letter, letterColor)
-        }, delay)
     }
 
     if (guessString === rightGuessString) 
